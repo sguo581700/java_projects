@@ -4,14 +4,15 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 
 public class GameEngine {
-    final double STAGE_WIDTH = 640;
-    final double STAGE_HEIGHT = 480;
+    final double STAGE_WIDTH = 800;
+    final double STAGE_HEIGHT = 640;
     private Bat batL;
     private Ball ball;
     private Bat batR;
     private Pane canvas;
     private Scene scene;
-    private Player player;
+    private Player playerOne;
+    private Player playerTwo;
 
 
 
@@ -21,7 +22,8 @@ public class GameEngine {
         batR = new Bat();
         canvas = new Pane();
         scene = new Scene(canvas, STAGE_WIDTH, STAGE_HEIGHT);
-        player = new Player();
+        playerOne = new Player();
+        playerTwo = new Player();
     }
 
     public Bat getBatL() {
@@ -43,7 +45,11 @@ public class GameEngine {
     public Scene getScene() {
         return scene;
     }
-    public Player getPlayer() {
-        return player;
+    public Player getPlayerOne() {
+        return playerOne;
     }
+    public Player getPlayerTwo() {
+        return playerTwo;
+    }
+
 }
